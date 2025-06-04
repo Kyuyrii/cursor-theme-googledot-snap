@@ -1,0 +1,31 @@
+name: cursor-theme-googledot
+build-base: core24
+base: bare
+version: '2.0.0'
+platforms:
+  all:
+    build-on: [amd64]
+    build-for: [all]
+summary: GoogleDot cursors
+description: |
+  A Snap that allows you to use GoogleDot cursors in Snap apps
+grade: stable
+confinement: strict
+
+slots:
+  icon-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/icons/GoogleDot-Black
+        - $SNAP/share/icons/GoogleDot-Blue
+        - $SNAP/share/icons/GoogleDot-Red
+        - $SNAP/share/icons/GoogleDot-White
+parts:
+  bibata-cursors:
+    plugin: dump
+    source: https://github.com/Kyuyrii/cursor-theme-googledot-snap/releases/download/v2.0.0/googledot-v2.0.0.zip
+    organize:
+      icon-themes: share/icons
+    prime:
+      - share/icons/
