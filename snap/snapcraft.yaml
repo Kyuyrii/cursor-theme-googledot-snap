@@ -24,8 +24,8 @@ slots:
 parts:
   bibata-cursors:
     plugin: dump
-    source: https://github.com/Kyuyrii/cursor-theme-googledot-snap/releases/download/v2.0.0/googledot-v2.0.0.zip
+    source: https://github.com/Kyuyrii/cursor-theme-googledot-snap/releases/download/v2.0.0/cursor-theme-googledot-snap-creation-files.deb
     organize:
-      icon-themes: share/icons
+      usr/share/icons: share/icons
     prime:
       - share/icons/
